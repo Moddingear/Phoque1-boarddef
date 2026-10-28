@@ -1,4 +1,4 @@
-= Phoque1 Board definitions
+# Phoque1 Board definitions
 
 Usage in Platformio:
 
