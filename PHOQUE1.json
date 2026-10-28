@@ -28,7 +28,7 @@
   "name": "PHOQUE1 Brushless Driver",
   "upload": {
     "maximum_ram_size": 32768,
-    "maximum_size": 129024,
+    "maximum_size": 131072,
     "protocol": "dfu",
     "protocols": [
       "stlink",
@@ -39,6 +39,6 @@
       "dfu"
     ]
   },
-  "url": "",
+  "url": "https://robonomicon.eu/phoque1",
   "vendor": "Robonomicon"
 }
