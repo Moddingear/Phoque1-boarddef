@@ -176,14 +176,17 @@
 
 #define A_CURRW_H				PA1		//phase W and opamp 1
 #define A_CURRW_L				PA3
-#define A_BEMFW					PA2
+#define A_CURRW					PA2
+#define A_BEMFW					PA4
 
 #define A_CURRU_H				PA7		//phase U and opamp 2
 #define A_CURRU_L				PA5
+#define A_CURRU					PA6
 #define A_BEMFU					PA0
 
 #define A_CURRV_H				PB0		//phase V and opamp 3
 #define A_CURRV_L				PB2
+#define A_CURRV					PB1
 #define A_BEMFV					PC4
 
 #define A_POTENTIOMETER			PC0
@@ -212,19 +215,18 @@
 #define USART_TX				PB6
 #define USART_RX				PB7
 
-#define ENCODER_A				PA6
-#define ENCODER_B				PA4
-#define ENCODER_Z				PC3
+#define ENCODER_A				PB4	//Shared with onboard magnetic sensor SPI MISO
+#define ENCODER_B				PB5	//Shared with onboard magnetic sensor SPI MOSI
+#define ENCODER_Z				PB3	//Shared with onboard magnetic sensor SPI SCK
 
-#define HALL1					ENCODER_A
-#define HALL2					ENCODER_B
-#define HALL3					ENCODER_Z
+#define HALL1					PC3
+#define HALL2					PC14
+#define HALL3					PC15
 
 
 // On-board LED pin number
-#define LED_RED					PA15
 #ifndef LED_BUILTIN
-	#define LED_BUILTIN				LED_RED
+	#define LED_BUILTIN				PA15
 #endif
 
 #define PIN_PWM_MAG_ANGLE
@@ -271,7 +273,7 @@
 #endif
 
 // UART Definitions
-#define SERIAL_UART_INSTANCE	1 //Connected to ST-Link
+#define SERIAL_UART_INSTANCE	1
 
 // Default pin used for 'Serial' instance (ex: ST-Link)
 // Mandatory for Firmata
@@ -283,7 +285,7 @@
 #endif
 
 /* HAL configuration */
-//#define HSE_VALUE				(8000000UL)
+#define HSE_VALUE				(8000000UL)
 
 /* Extra HAL modules */
 #if !defined(HAL_DAC_MODULE_DISABLED)
